@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>One</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js">
+    </script>
+
+    <script>
+      var Scene = "Scene1";
+      var Scene1Info = [];
+      function graphics() { //console.log(Scene === "Scene1")
+        var currPos=document.querySelector("#CAMERA").getAttribute('rotation');
+        var currX=currPos.x%360;
+        var currY=currPos.y%360;
+        if (currX < 0) {currX = currX+360}
+        if (currY < 0) {currY = currY+360}
+        var xLabel="X: "+ currX.toFixed(2);
+        var yLabel="Y: "+ currY.toFixed(2);
+        var skyElement = document.querySelector('#background');
+
+        if( (currX > 346 || currX < 11) && (currY > 65 && currY < 100) && Scene === "Scene1" ) {
+            skyElement.setAttribute('src', '#scene11')
+            document.querySelector('#audio_image1_1').setAttribute('position', "-45 15 -2")
+        } 
+        else if( (currX > 358 || currX < 2) && (currY > 154 && currY < 160) && Scene === "Scene1" ) {
+            skyElement.setAttribute('src', '#scene14')
+            document.querySelector('#audio_image1_4').setAttribute('position', "-30 8 70")
+        }
+        // else if( (currX > 358 || currX < 2.5) && (currY > 23 && currY < 52) ) {
+        //     skyElement.setAttribute('src', '#scene12')
+        // } 
+        else {
+            skyElement.setAttribute('src', '#scene1BW')
+            document.querySelector('#audio_image1_1').setAttribute('position', "-405 10 -2")
+            document.querySelector('#audio_image1_4').setAttribute('position', "-300 8 70")
+        }
+
+        if(Scene1Info.length === 2) {
+          document.querySelector('#arrow_image1_1').setAttribute('position', "-45 15 -12")
+          document.querySelector('#arrow_image1_4').setAttribute('position', "-30 8 55")
+        } else {
+          document.querySelector('#arrow_image1_1').setAttribute('position', "-450 15 -12")
+          document.querySelector('#arrow_image1_4').setAttribute('position', "-300 8 55")
+        }
+
+
+        document.querySelector("#MOVING").setAttribute(
+            "rotation",currPos
+        );
+        document.querySelector("#MOVING-TEXT").setAttribute(
+            "text","value",xLabel+"\n\n"+yLabel
+        );
+    
+        timerID = setTimeout(graphics,100);
+
+        return true;
+      }
+
+      AFRAME.registerComponent('audiohandler1_1', {
+        init: function() {
+          let playing = false;
+          let audio = document.querySelector("#audio1_1");
+          this.el.addEventListener('click', () => { //console.log('clicked')
+              audio.play()
+          });
+          audio.addEventListener('ended', () => {
+            if(Scene1Info.indexOf("audio1_1") === -1) {
+              Scene1Info.push("audio1_1")
+            }
+            console.log(Scene1Info)
+          })
+        }
+      })
+
+      AFRAME.registerComponent('audiohandler1_4', {
+        init: function() {
+          let playing = false;
+          let audio = document.querySelector("#audio1_4");
+          this.el.addEventListener('click', () => { //console.log('clicked')
+              audio.play()
+          });
+          audio.addEventListener('ended', () => {
+            if(Scene1Info.indexOf("audio1_4") === -1) {
+              Scene1Info.push("audio1_4")
+            }
+            console.log(Scene1Info)
+          })
+        }
+      })
+    </script>
+
+
+  </head>
+
+<body onload="graphics()">
+    <a-scene cursor="rayOrigin:mouse">
+            <!-- cursor="rayOrigin:mouse" -->
+        <a-assets>
+            <!-- <img src="./assets/Scenes/Scene_1BW.jpg" id="scene1BW" > -->
+            <img src="./assets/Scenes/temp2.jpg" id="scene1BW" >
+            <img src="./assets/Scenes/Scene_1_1.jpg" id="scene11" >
+            <img src="./assets/Scenes/Scene_1_4.jpg" id="scene14" >
+            <audio id="audio1_1" crossorigin="anonymous" src="./assets/Audio/audio1_1.mp3"></audio>
+            <audio id="audio1_4" crossorigin="anonymous" src="./assets/Audio/audio1_4.mp3"></audio>
+
+            <img src="./assets/arrow.png" id="arrow" >
+            
+            <img id="audio_img" src="./assets/audio_speakers.png">
+        </a-assets>
+
+      <a-entity 
+        camera
+        id="CAMERA"
+        look-controls="reverseMouseDrag: true"
+        wasd-controls>
+        <a-ring 
+          radius-outer="0.030" 
+          radius-inner="0.005"
+          position="0 0 -0.9"
+          material="color: gray; shader: flat">
+         </a-ring>
+      </a-entity>
+
+      <a-entity 
+       rotation="0 0 0" 
+       id="MOVING">
+            <a-text
+             id="MOVING-TEXT"
+             value="" 
+             width="2" 
+             color="yellow" 
+             font="roboto" 
+             align="center"
+             position="0 0 -1"
+             rotation="0 0 0"
+            ></a-text>
+      </a-entity>
+
+      <a-sky 
+       src="#scene1BW"
+       rotation="0 0 0"
+       id="background"
+       radius="100"
+       >
+      </a-sky>
+
+        <a-image src="#arrow" width="7" height="7" position="-405 15 -12" rotation="0 90 0" id="arrow_image1_1" ></a-image>
+        <a-image src="#audio_img" position="-405 10 -2" width="5" height="5" id="audio_image1_1" rotation="0 90 0" audiohandler1_1></a-image>
+
+        <a-image src="#arrow" width="7" height="7" position="-300 8 55" rotation="0 2 0" id="arrow_image1_4" ></a-image>
+        <a-image src="#audio_img" position="-300 8 70" width="5" height="5" id="audio_image1_4" rotation="0 2 0" audiohandler1_4></a-image>
+
+      </a-scene>
+ 
+
+</body>
+</html>
