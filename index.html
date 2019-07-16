@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>One</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <script src="https://aframe.io/releases/0.6.1/aframe.min.js">
     </script>
 
@@ -11,7 +11,7 @@
       var Scene = "Scene1";
       var Scene1Info = [];
       function graphics() { //console.log(Scene === "Scene1")
-        var currPos=document.querySelector("#CAMERA").getAttribute('rotation');
+        var currPos=document.querySelector("#camera").getAttribute('rotation');
         var currX=currPos.x%360;
         var currY=currPos.y%360;
         if (currX < 0) {currX = currX+360}
@@ -24,20 +24,25 @@
             skyElement.setAttribute('src', '#scene11')
             document.querySelector('#audio_image1_1').setAttribute('position', "-45 15 -2")
         } 
-        else if( (currX > 358 || currX < 2) && (currY > 154 && currY < 160) && Scene === "Scene1" ) {
+        else if( (currX > 358 || currX < 9) && (currY > 160 && currY < 180) && Scene === "Scene1" ) {
             skyElement.setAttribute('src', '#scene14')
-            document.querySelector('#audio_image1_4').setAttribute('position', "-30 8 70")
+            document.querySelector('#audio_image1_4').setAttribute('position', "-10 15 70")
         }
-        // else if( (currX > 358 || currX < 2.5) && (currY > 23 && currY < 52) ) {
-        //     skyElement.setAttribute('src', '#scene12')
-        // } 
+        else if( (currX > 332 || currX < 348) && (currY > 317 && currY < 334) && Scene === "Scene1" ) {
+            skyElement.setAttribute('src', '#scene13')
+            document.querySelector('#audio_image1_3').setAttribute('position', "35 -10 -50")
+        } else if ( (currX > 28 || currX < 44) && (currY > 74 && currY < 92) && Scene === "Scene1") {
+            skyElement.setAttribute('src', '#scene12')
+            // document.querySelector('#audio_image1_3').setAttribute('position', "35 -10 -50")
+        }
         else {
             skyElement.setAttribute('src', '#scene1BW')
             document.querySelector('#audio_image1_1').setAttribute('position', "-405 10 -2")
             document.querySelector('#audio_image1_4').setAttribute('position', "-300 8 70")
+            document.querySelector('#audio_image1_3').setAttribute('position', "350 -10 -50")
         }
 
-        if(Scene1Info.length === 2) {
+        if(Scene1Info.length === 3) {
           document.querySelector('#arrow_image1_1').setAttribute('position', "-45 15 -12")
           document.querySelector('#arrow_image1_4').setAttribute('position', "-30 8 55")
         } else {
@@ -58,16 +63,36 @@
         return true;
       }
 
+      const sleep = ms => { console.log('sleep')
+        return new Promise(resolve => setTimeout(resolve, ms))
+      }
+
       AFRAME.registerComponent('audiohandler1_1', {
         init: function() {
           let playing = false;
           let audio = document.querySelector("#audio1_1");
-          this.el.addEventListener('click', () => { //console.log('clicked')
+          this.el.addEventListener('click', async() => { //console.log('clicked')
+              let i = 1;
+              while(i<2){
+                await sleep(25).then(()=>{
+                  i=i+0.01;
+                  document.querySelector('#camera').setAttribute('zoom', i)
+                  console.log(document.querySelector('#camera').getAttribute("zoom"))
+                })
+              }
               audio.play()
           });
-          audio.addEventListener('ended', () => {
+          audio.addEventListener('ended', async() => {
             if(Scene1Info.indexOf("audio1_1") === -1) {
-              Scene1Info.push("audio1_1")
+              let i = 2;
+              while(i>1){
+                await sleep(25).then(()=>{
+                  i=i-0.01;
+                  document.querySelector('#camera').setAttribute('zoom', i)
+                  console.log(document.querySelector('#camera').getAttribute("zoom"))
+                })
+              }
+              Scene1Info.push("audio1_1") 
             }
             console.log(Scene1Info)
           })
@@ -78,12 +103,60 @@
         init: function() {
           let playing = false;
           let audio = document.querySelector("#audio1_4");
-          this.el.addEventListener('click', () => { //console.log('clicked')
+          this.el.addEventListener('click', async() => { //console.log('clicked')
+              let i = 1;
+              while(i<2){
+                await sleep(25).then(()=>{
+                  i=i+0.01;
+                  document.querySelector('#camera').setAttribute('zoom', i)
+                  console.log(document.querySelector('#camera').getAttribute("zoom"))
+                })
+              }
               audio.play()
           });
-          audio.addEventListener('ended', () => {
+          audio.addEventListener('ended', async() => {
             if(Scene1Info.indexOf("audio1_4") === -1) {
+              let i = 2;
+              while(i>1){
+                await sleep(25).then(()=>{
+                  i=i-0.01;
+                  document.querySelector('#camera').setAttribute('zoom', i)
+                  console.log(document.querySelector('#camera').getAttribute("zoom"))
+                })
+              }
               Scene1Info.push("audio1_4")
+            }
+            console.log(Scene1Info)
+          })
+        }
+      })
+
+      AFRAME.registerComponent('audiohandler1_3', {
+        init: function() {
+          let playing = false;
+          let audio = document.querySelector("#audio1_3");
+          this.el.addEventListener('click', async() => { //console.log('clicked')
+          let i = 1;
+              while(i<2){
+                await sleep(25).then(()=>{
+                  i=i+0.01;
+                  document.querySelector('#camera').setAttribute('zoom', i)
+                  console.log(document.querySelector('#camera').getAttribute("zoom"))
+                })
+              }
+              audio.play()
+          });
+          audio.addEventListener('ended', async() => {
+            if(Scene1Info.indexOf("audio1_3") === -1) {
+              let i = 2;
+              while(i>1){
+                await sleep(25).then(()=>{
+                  i=i-0.01;
+                  document.querySelector('#camera').setAttribute('zoom', i)
+                  console.log(document.querySelector('#camera').getAttribute("zoom"))
+                })
+              }
+              Scene1Info.push("audio1_3")
             }
             console.log(Scene1Info)
           })
@@ -98,21 +171,26 @@
     <a-scene cursor="rayOrigin:mouse">
             <!-- cursor="rayOrigin:mouse" -->
         <a-assets>
-            <!-- <img src="./assets/Scenes/Scene_1BW.jpg" id="scene1BW" > -->
-            <img src="./assets/Scenes/temp2.jpg" id="scene1BW" >
-            <img src="./assets/Scenes/Scene_1_1.jpg" id="scene11" >
-            <img src="./assets/Scenes/Scene_1_4.jpg" id="scene14" >
-            <audio id="audio1_1" crossorigin="anonymous" src="./assets/Audio/audio1_1.mp3"></audio>
-            <audio id="audio1_4" crossorigin="anonymous" src="./assets/Audio/audio1_4.mp3"></audio>
+            <img src="./assets/Scenes/Scene_1/Scene_1_bw.jpg" id="scene1BW" >
+            <img src="./assets/Scenes/Scene_1/Scene_1_1.jpg" id="scene11" >
+            <img src="./assets/Scenes/Scene_1/Scene_1_4.jpg" id="scene14" >
+            <img src="./assets/Scenes/Scene_1/Scene_1_3.jpg" id="scene13">
+            <img src="./assets/Scenes/Scene_1/Scene_1_2.jpg" id="scene12">
+            <audio id="audio1_1" crossorigin="anonymous" src="./assets/Scenes/Scene_1/scene_1_1.m4a"></audio>
+            <audio id="audio1_4" crossorigin="anonymous" src="./assets/Scenes/Scene_1/scene_1_4.m4a"></audio>
+            <audio id="audio1_3" crossorigin="anonymous" src="./assets/Scenes/Scene_1/scene_1_3.m4a"></audio>
+            <!-- <audio id="audio1_3" crossorigin="anonymous" src="./assets/Scenes/Scene_1/scene_1_3.m4a"></audio> -->
 
             <img src="./assets/arrow.png" id="arrow" >
             
             <img id="audio_img" src="./assets/audio_speakers.png">
         </a-assets>
 
-      <a-entity 
+      <!-- <a-entity 
         camera
-        id="CAMERA"
+        id="camera"
+        zoom="1"
+        position= "0 1.6 0"
         look-controls="reverseMouseDrag: true"
         wasd-controls>
         <a-ring 
@@ -121,7 +199,20 @@
           position="0 0 -0.9"
           material="color: gray; shader: flat">
          </a-ring>
-      </a-entity>
+      </a-entity> -->
+      <a-camera 
+        position="0 1.6 0" 
+        zoom="1" 
+        id="camera"
+        look-controls="reverseMouseDrag: true"
+      > 
+        <a-ring 
+          radius-outer="0.030" 
+          radius-inner="0.005"
+          position="0 0 -0.9"
+          material="color: gray; shader: flat">
+      </a-ring>
+      </a-camera>
 
       <a-entity 
        rotation="0 0 0" 
@@ -152,6 +243,7 @@
         <a-image src="#arrow" width="7" height="7" position="-300 8 55" rotation="0 2 0" id="arrow_image1_4" ></a-image>
         <a-image src="#audio_img" position="-300 8 70" width="5" height="5" id="audio_image1_4" rotation="0 2 0" audiohandler1_4></a-image>
 
+        <a-image src="#audio_img" position="350 -10 -50" width="5" height="5", id="audio_image1_3" rotation="0 0 90" audiohandler1_3></a-image>
       </a-scene>
  
 
