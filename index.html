@@ -7,7 +7,7 @@
     </script> -->
     <script src="./aframe0.6.1.min.js"></script>
 
-    <script src="./Scene.js" ></script>
+    <script src="./Scene.js" defer  ></script>
     <script src="./audiohandlers.js" ></script>
 
 
@@ -20,9 +20,9 @@
             <!-- Scene 1 -->
             <img id="scene1BW" src="./assets/Scenes/Scene_1/Scene_1_bw.jpg" preload="auto" >
             <img id="scene11" src="./assets/Scenes/Scene_1/Scene_1_1.jpg" preload="auto" >
-            <img id="scene14" src="./assets/Scenes/Scene_1/Scene_1_4.jpg" preload="auto" >
-            <img id="scene13" src="./assets/Scenes/Scene_1/Scene_1_3.jpg" preload="auto" >
             <img id="scene12" src="./assets/Scenes/Scene_1/Scene_1_2.jpg" preload="auto" >
+            <img id="scene13" src="./assets/Scenes/Scene_1/Scene_1_3.jpg" preload="auto" >
+            <img id="scene14" src="./assets/Scenes/Scene_1/Scene_1_4.jpg" preload="auto" >
             <audio id="audio1_1" crossorigin="anonymous" src="./assets/Scenes/Scene_1/scene_1_1.m4a"></audio>
             <audio id="audio1_4" crossorigin="anonymous" src="./assets/Scenes/Scene_1/scene_1_4.m4a"></audio>
             <audio id="audio1_3" crossorigin="anonymous" src="./assets/Scenes/Scene_1/scene_1_3.m4a"></audio>
@@ -38,6 +38,26 @@
             <img id="scene24" src="./assets/Scenes/Scene_2/Scene_2_4.jpg" >
             <img id="scene25" src="./assets/Scenes/Scene_2/Scene_2_5.jpg" >
             <img id="scene26" src="./assets/Scenes/Scene_2/Scene_2_6.jpg" >
+            <audio id="audio2_1" crossorigin="anonymous" src="./assets/Scenes/Scene_2/scene_2_1.mp3"></audio>
+            <audio id="audio2_2" crossorigin="anonymous" src="./assets/Scenes/Scene_2/scene_2_2.mp3"></audio>
+            <audio id="audio2_3" crossorigin="anonymous" src="./assets/Scenes/Scene_2/scene_2_3.mp3"></audio>
+            <audio id="audio2_4" crossorigin="anonymous" src="./assets/Scenes/Scene_2/scene_2_4.mp3"></audio>
+            <audio id="audio2_5" crossorigin="anonymous" src="./assets/Scenes/Scene_2/scene_2_5.mp3"></audio>
+            <audio id="audio2_6" crossorigin="anonymous" src="./assets/Scenes/Scene_2/scene_2_6.mp3"></audio>
+            <audio id="spacial_audio2_1" crossorigin="anonymous" src="./assets/Scenes/Scene_2/scene_2_1_bg.mp3"></audio>
+            <audio id="spacial_audio2_2" crossorigin="anonymous" src="./assets/Scenes/Scene_2/scene_2_2_bg.mp3"></audio>
+            <audio id="spacial_audio2_3" crossorigin="anonymous" src="./assets/Scenes/Scene_2/scene_2_3_bg.mp3"></audio>
+            <audio id="spacial_audio2_4" crossorigin="anonymous" src="./assets/Scenes/Scene_2/scene_2_4_bg.mp3"></audio>
+            <audio id="spacial_audio2_5" crossorigin="anonymous" src="./assets/Scenes/Scene_2/scene_2_5_bg.mp3"></audio>
+            <audio id="spacial_audio2_6" crossorigin="anonymous" src="./assets/Scenes/Scene_2/scene_2_6_bg.mp3"></audio>
+
+            <!-- Scene 3 -->
+            <img id="scene3BW" src="./assets/Scenes/Scene_3/Scene_3_bw.jpg">
+            <img id="scene31" src="./assets/Scenes/Scene_3/Scene_3_1.jpg">
+            <img id="scene32" src="./assets/Scenes/Scene_3/Scene_3_2.jpg">
+            <img id="scene33" src="./assets/Scenes/Scene_3/Scene_3_3.jpg">
+            <img id="scene34" src="./assets/Scenes/Scene_3/Scene_3_4.jpg">
+            <img id="scene35" src="./assets/Scenes/Scene_3/Scene_3_5.jpg">
 
             <img src="./assets/arrow.png" id="arrow" >
             <img id="audio_img" src="./assets/audio_speakers.png">
@@ -89,21 +109,37 @@
         <a-image src="#arrow" width="7" height="7" position="-37 14 94" rotation="0 2 0" id="arrow_image1_4" ></a-image>
         <a-image src="#audio_img" position="-29 20 98" width="5" height="5" id="audio_image1_4" rotation="0 2 0" audiohandler1_4></a-image>
 
-        <a-entity id="spacial_box1_3" geometry="primitive: box" position="50 -41.7 -92" spacial_audiohandler1_3></a-entity>
+        <a-entity id="spacial_box1_3" geometry="primitive: box" position="52 -15 -86" spacial_audiohandler1_3></a-entity>
         <a-image src="#audio_img" position="52 -15 -86" width="5" height="5", id="audio_image1_3" rotation="0 0 90" audiohandler1_3></a-image>
 
-        <a-entity id="spacial_box1_2" geometry="primitive: box" position="-103 65.8 -17.6" spacial_audiohandler1_2></a-entity>
+        <a-entity id="spacial_box1_2" geometry="primitive: box" position="-75 71 1" spacial_audiohandler1_2></a-entity>
         <a-image src="#audio_img" position="-75 71 1" width="5" height="5", id="audio_image1_2" rotation="0 90 90" audiohandler1_2 ></a-image>
       <!-- Scene1 assets end-->
 
       <!-- Scene2 assets started-->
+        <a-entity id="spacial_box2_1" geometry="primitive: box" position="47 50 80" spacial_audiohandler2_1></a-entity>
         <a-image src="#audio_img" position="47 50 80" width="5" height="5" id="audio_image2_1" rotation="0 00 0" audiohandler2_1></a-image>
+
+        <a-entity id="spacial_box2_2" geometry="primitive: box" position="55 25 -92" spacial_audiohandler2_2></a-entity>
         <a-image src="#audio_img" position="55 25 -92" width="5" height="5" id="audio_image2_2" rotation="0 -30 0" audiohandler2_2></a-image>
+
+        <a-entity id="spacial_box2_3" geometry="primitive: box" position="4 -20 100" spacial_audiohandler2_3></a-entity>
         <a-image src="#audio_img" position="4 -20 100" width="5" height="5" id="audio_image2_3" rotation="0 0 0" audiohandler2_3></a-image>
+
+        <a-entity id="spacial_box2_4" geometry="primitive: box" position="-63 73 39" spacial_audiohandler2_4></a-entity>
         <a-image src="#audio_img" position="-63 73 39" width="5" height="5" id="audio_image2_4" rotation="0 -50 0" audiohandler2_4></a-image>
+
+        <a-entity id="spacial_box2_5" geometry="primitive: box" position="-100 27 -20" spacial_audiohandler2_5></a-entity>
         <a-image src="#audio_img" position="-100 27 -20" width="5" height="5" id="audio_image2_5" rotation="0 90 0" audiohandler2_5></a-image>
+
+        <a-entity id="spacial_box2_6" geometry="primitive: box" position="8 60 -84" spacial_audiohandler2_6></a-entity>
         <a-image src="#audio_img" position="8 60 -84" width="5" height="5" id="audio_image2_6" rotation="0 0 0" audiohandler2_6></a-image>
-        <!-- Scene2 assets ended-->
+      <!-- Scene2 assets ended-->
+
+
+
+
+
       </a-scene>
       
 

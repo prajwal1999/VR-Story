@@ -1,5 +1,9 @@
 var Scene = "Scene2";
-      var Scene1Info = [];
+var AudioPlaying = false;
+
+var Scene1Info = [];
+var Scene2Info = [];
+
       function graphics() {
         var currPos=document.querySelector("#camera").getAttribute('rotation');
         var currX=currPos.x%360;
@@ -9,7 +13,7 @@ var Scene = "Scene2";
         var xLabel="X: "+ currX.toFixed(2);
         var yLabel="Y: "+ currY.toFixed(2);
         var skyElement = document.querySelector('#background');
-        console.log(xLabel, yLabel)
+        // console.log(xLabel, yLabel)
         if(Scene === "Scene1") {
 
           if( (currX > 346 || currX < 11) && (currY > 65 && currY < 100) && Scene === "Scene1" ) {
@@ -69,6 +73,21 @@ var Scene = "Scene2";
             document.querySelector('#audio_image2_4').setAttribute('position', "-63 73 39")
             document.querySelector('#audio_image2_5').setAttribute('position', "-100 27 -20")
             document.querySelector('#audio_image2_6').setAttribute('position', "8 60 -84")
+            let randNum = Math.random()
+              
+            if ( (randNum > 0.99) && (Scene2Info.indexOf("audio2_1") === -1) &&  Scene === "Scene2") { console.log(randNum)
+                document.querySelector("#spacial_box2_1").click()
+            } else if ( (randNum < 0.01) && (Scene2Info.indexOf("audio2_2") === -1) &&  Scene === "Scene2") { console.log(randNum)
+                document.querySelector("#spacial_box2_2").click()
+            } else if ( (randNum > 0.10) && (randNum < 0.11) && (Scene2Info.indexOf("audio2_3") === -1) &&  Scene === "Scene2") { console.log(randNum)
+              document.querySelector("#spacial_box2_3").click()
+            } else if ( (randNum > 0.20) && (randNum < 0.21) && (Scene2Info.indexOf("audio2_4") === -1) &&  Scene === "Scene2") { console.log(randNum)
+              document.querySelector("#spacial_box2_4").click()
+            } else if ( (randNum > 0.30) && (randNum < 0.31) && (Scene2Info.indexOf("audio2_5") === -1) &&  Scene === "Scene2") { console.log(randNum)
+              document.querySelector("#spacial_box2_5").click()
+            } else if ( (randNum > 0.40) && (randNum < 0.41) && (Scene2Info.indexOf("audio2_6") === -1) &&  Scene === "Scene2") { console.log(randNum)
+              document.querySelector("#spacial_box2_6").click()
+            }
           }
         }
 
