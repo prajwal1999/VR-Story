@@ -58,6 +58,16 @@
             <img id="scene33" src="./assets/Scenes/Scene_3/Scene_3_3.jpg">
             <img id="scene34" src="./assets/Scenes/Scene_3/Scene_3_4.jpg">
             <img id="scene35" src="./assets/Scenes/Scene_3/Scene_3_5.jpg">
+            <audio id="audio3_1" crossorigin="anonymous" src="./assets/Scenes/Scene_3/scene_3_1.mp3"></audio>
+            <audio id="audio3_2" crossorigin="anonymous" src="./assets/Scenes/Scene_3/scene_3_2.mp3"></audio>
+            <audio id="audio3_3" crossorigin="anonymous" src="./assets/Scenes/Scene_3/scene_3_3.mp3"></audio>
+            <audio id="audio3_4" crossorigin="anonymous" src="./assets/Scenes/Scene_3/scene_3_4.mp3"></audio>
+            <audio id="audio3_5" crossorigin="anonymous" src="./assets/Scenes/Scene_3/scene_3_5.mp3"></audio>
+            <audio id="spacial_audio3_1" crossorigin="anonymous" src="./assets/Scenes/Scene_3/scene_3_1_bg.mp3"></audio>
+            <audio id="spacial_audio3_2" crossorigin="anonymous" src="./assets/Scenes/Scene_3/scene_3_2_bg.mp3"></audio>
+            <audio id="spacial_audio3_3" crossorigin="anonymous" src="./assets/Scenes/Scene_3/scene_3_3_bg.mp3"></audio>
+            <audio id="spacial_audio3_4" crossorigin="anonymous" src="./assets/Scenes/Scene_3/scene_3_4_bg.mp3"></audio>
+            <audio id="spacial_audio3_5" crossorigin="anonymous" src="./assets/Scenes/Scene_3/scene_3_5_bg.mp3"></audio>
 
             <img src="./assets/arrow.png" id="arrow" >
             <img id="audio_img" src="./assets/audio_speakers.png">
@@ -95,7 +105,7 @@
       </a-entity>
 
       <a-sky 
-       src="#scene2BW"
+       src="#scene3BW"
        rotation="0 0 0"
        id="background"
        radius="100"
@@ -118,10 +128,12 @@
 
       <!-- Scene2 assets started-->
         <a-entity id="spacial_box2_1" geometry="primitive: box" position="47 50 80" spacial_audiohandler2_1></a-entity>
-        <a-image src="#audio_img" position="47 50 80" width="5" height="5" id="audio_image2_1" rotation="0 00 0" audiohandler2_1></a-image>
+        <a-image src="#audio_img" position="47 50 80" width="5" height="5" id="audio_image2_1" rotation="0 0 0" audiohandler2_1></a-image>
+        <a-image src="#arrow" width="10" height="10" position="47 25 80" rotation="0 0 0" id="arrow_image2_1" ></a-image>
 
         <a-entity id="spacial_box2_2" geometry="primitive: box" position="55 25 -92" spacial_audiohandler2_2></a-entity>
         <a-image src="#audio_img" position="55 25 -92" width="5" height="5" id="audio_image2_2" rotation="0 -30 0" audiohandler2_2></a-image>
+        <a-image src="#arrow" width="10" height="10" position="55 25 -92" rotation="0 0 0" id="arrow_image2_2" ></a-image>
 
         <a-entity id="spacial_box2_3" geometry="primitive: box" position="4 -20 100" spacial_audiohandler2_3></a-entity>
         <a-image src="#audio_img" position="4 -20 100" width="5" height="5" id="audio_image2_3" rotation="0 0 0" audiohandler2_3></a-image>
