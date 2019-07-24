@@ -16,6 +16,7 @@ document.querySelector("#arrow_image1_1").addEventListener('click', async()=>{
     document.querySelector('#arrow_image1_4').setAttribute('position', "-37 14 94")
     skyElement.setAttribute('src', '#scene2BW')
     Scene = "Scene2"
+    document.querySelector('#camera').setAttribute('zoom', 1)
 })
 
 document.querySelector("#arrow_image2_1").addEventListener('click', async()=>{
@@ -38,6 +39,7 @@ document.querySelector("#arrow_image2_1").addEventListener('click', async()=>{
   
   skyElement.setAttribute('src', '#scene3BW')
   Scene = "Scene3"
+  document.querySelector('#camera').setAttribute('zoom', 1)
 })
 
 
@@ -61,4 +63,5 @@ document.querySelector("#arrow_image2_2").addEventListener('click', async()=>{
   
   skyElement.setAttribute('src', '#scene1BW')
   Scene = "Scene1"
+  document.querySelector('#camera').setAttribute('zoom', 1)
 })

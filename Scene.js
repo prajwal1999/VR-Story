@@ -1,4 +1,4 @@
-var Scene = "Scene3";
+var Scene = "Scene1";
 var AudioPlaying = false;
 
 var Scene1Info = [];
@@ -154,12 +154,12 @@ var scene3_5 = false;
         }
 
 
-        document.querySelector("#MOVING").setAttribute(
-            "rotation",currPos
-        );
-        document.querySelector("#MOVING-TEXT").setAttribute(
-            "text","value",xLabel+"\n\n"+yLabel
-        );
+        // document.querySelector("#MOVING").setAttribute(
+        //     "rotation",currPos
+        // );
+        // document.querySelector("#MOVING-TEXT").setAttribute(
+        //     "text","value",xLabel+"\n\n"+yLabel
+        // );
     
         timerID = setTimeout(graphics,100);
 
