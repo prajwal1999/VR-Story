@@ -16,7 +16,7 @@ AFRAME.registerComponent('audiohandler1_1', {
         }
       });
       audio.addEventListener('ended', async() => {
-        if(Scene1Info.indexOf("audio1_1") === -1) {
+
           let i = 2;
           while(i>1){
             await sleep(25).then(()=>{
@@ -24,6 +24,7 @@ AFRAME.registerComponent('audiohandler1_1', {
               document.querySelector('#camera').setAttribute('zoom', i)
             })
           }
+        if(Scene1Info.indexOf("audio1_1") === -1) {
           Scene1Info.push("audio1_1") 
         }
         AudioPlaying = false;
@@ -49,7 +50,7 @@ AFRAME.registerComponent('audiohandler1_1', {
         }
       });
       audio.addEventListener('ended', async() => {
-        if(Scene1Info.indexOf("audio1_4") === -1) {
+        
           let i = 2;
           while(i>1){
             await sleep(25).then(()=>{
@@ -57,6 +58,7 @@ AFRAME.registerComponent('audiohandler1_1', {
               document.querySelector('#camera').setAttribute('zoom', i)
             })
           }
+        if(Scene1Info.indexOf("audio1_4") === -1) {
           Scene1Info.push("audio1_4")
         }
         AudioPlaying = false;
@@ -82,7 +84,7 @@ AFRAME.registerComponent('audiohandler1_1', {
         }
       });
       audio.addEventListener('ended', async() => {
-        if(Scene1Info.indexOf("audio1_3") === -1) {
+        
           let i = 2;
           while(i>1){
             await sleep(25).then(()=>{
@@ -90,6 +92,7 @@ AFRAME.registerComponent('audiohandler1_1', {
               document.querySelector('#camera').setAttribute('zoom', i)
             })
           }
+        if(Scene1Info.indexOf("audio1_3") === -1) {
           Scene1Info.push("audio1_3")
         }
         AudioPlaying = false;
@@ -115,7 +118,7 @@ AFRAME.registerComponent('audiohandler1_1', {
         }
       });
       audio.addEventListener('ended', async() => {
-        if(Scene1Info.indexOf("audio1_2") === -1) {
+        
           let i = 2;
           while(i>1){
             await sleep(25).then(()=>{
@@ -123,6 +126,7 @@ AFRAME.registerComponent('audiohandler1_1', {
               document.querySelector('#camera').setAttribute('zoom', i)
             })
           }
+        if(Scene1Info.indexOf("audio1_2") === -1) {
           Scene1Info.push("audio1_2")
         }
         AudioPlaying = false;
@@ -183,7 +187,7 @@ AFRAME.registerComponent('audiohandler2_1', {
       }
     });
     audio.addEventListener('ended', async() => {
-      if(Scene2Info.indexOf("audio2_1") === -1) {
+      
         let i = 2;
         while(i>1){
           await sleep(25).then(()=>{
@@ -191,6 +195,7 @@ AFRAME.registerComponent('audiohandler2_1', {
             document.querySelector('#camera').setAttribute('zoom', i)
           })
         }
+      if(Scene2Info.indexOf("audio2_1") === -1) {
         Scene2Info.push("audio2_1") 
       }
       AudioPlaying = false;
@@ -217,7 +222,7 @@ AFRAME.registerComponent('audiohandler2_2', {
       }
     });
     audio.addEventListener('ended', async() => {
-      if(Scene2Info.indexOf("audio2_2") === -1) {
+      
         let i = 2;
         while(i>1){
           await sleep(25).then(()=>{
@@ -225,6 +230,7 @@ AFRAME.registerComponent('audiohandler2_2', {
             document.querySelector('#camera').setAttribute('zoom', i)
           })
         }
+      if(Scene2Info.indexOf("audio2_2") === -1) {
         Scene2Info.push("audio2_2") 
       }
       AudioPlaying = false;
@@ -251,7 +257,7 @@ AFRAME.registerComponent('audiohandler2_3', {
       }
     });
     audio.addEventListener('ended', async() => {
-      if(Scene2Info.indexOf("audio2_3") === -1) {
+      
         let i = 2;
         while(i>1){
           await sleep(25).then(()=>{
@@ -259,6 +265,7 @@ AFRAME.registerComponent('audiohandler2_3', {
             document.querySelector('#camera').setAttribute('zoom', i)
           })
         }
+      if(Scene2Info.indexOf("audio2_3") === -1) {
         Scene2Info.push("audio2_3") 
       }
       AudioPlaying = false;
@@ -285,7 +292,7 @@ AFRAME.registerComponent('audiohandler2_4', {
       }
     });
     audio.addEventListener('ended', async() => {
-      if(Scene2Info.indexOf("audio2_4") === -1) {
+      
         let i = 2;
         while(i>1){
           await sleep(25).then(()=>{
@@ -293,6 +300,7 @@ AFRAME.registerComponent('audiohandler2_4', {
             document.querySelector('#camera').setAttribute('zoom', i)
           })
         }
+      if(Scene2Info.indexOf("audio2_4") === -1) {
         Scene2Info.push("audio2_4") 
       }
       AudioPlaying = false;
@@ -319,7 +327,7 @@ AFRAME.registerComponent('audiohandler2_5', {
       }
     });
     audio.addEventListener('ended', async() => {
-      if(Scene2Info.indexOf("audio2_5") === -1) {
+      
         let i = 2;
         while(i>1){
           await sleep(25).then(()=>{
@@ -327,6 +335,7 @@ AFRAME.registerComponent('audiohandler2_5', {
             document.querySelector('#camera').setAttribute('zoom', i)
           })
         }
+      if(Scene2Info.indexOf("audio2_5") === -1) {
         Scene2Info.push("audio2_5") 
       }
       AudioPlaying = false;
@@ -353,7 +362,7 @@ AFRAME.registerComponent('audiohandler2_6', {
       }
     });
     audio.addEventListener('ended', async() => {
-      if(Scene2Info.indexOf("audio2_6") === -1) {
+      
         let i = 2;
         while(i>1){
           await sleep(25).then(()=>{
@@ -361,6 +370,7 @@ AFRAME.registerComponent('audiohandler2_6', {
             document.querySelector('#camera').setAttribute('zoom', i)
           })
         }
+      if(Scene2Info.indexOf("audio2_6") === -1) {
         Scene2Info.push("audio2_6") 
       }
       AudioPlaying = false;
@@ -449,6 +459,243 @@ AFRAME.registerComponent('spacial_audiohandler2_6', {
     let audio = document.querySelector("#spacial_audio2_6");
     this.el.addEventListener('click', () => {
       if(Scene2Info.indexOf("audio2_6") === -1 && !AudioPlaying) {
+        AudioPlaying = true;
+        audio.play()
+      }  
+    });
+    audio.addEventListener('ended', () => {
+      AudioPlaying = false;
+    })
+  }
+})
+
+
+
+
+AFRAME.registerComponent('audiohandler3_1', {
+  init: function() {
+    let audio = document.querySelector("#audio3_1");
+    this.el.addEventListener('click', async() => { 
+      if(!AudioPlaying) {
+        AudioPlaying = true;
+        let i = 1;
+        while(i<2){
+          await sleep(25).then(()=>{
+            i=i+0.01;
+            document.querySelector('#camera').setAttribute('zoom', i)
+          })
+        }
+        audio.play()
+      }
+    });
+    audio.addEventListener('ended', async() => {
+      
+        let i = 2;
+        while(i>1){
+          await sleep(25).then(()=>{
+            i=i-0.01;
+            document.querySelector('#camera').setAttribute('zoom', i)
+          })
+        }
+      if(Scene3Info.indexOf("audio3_1") === -1) {
+        Scene2Info.push("audio3_1") 
+      }
+      AudioPlaying = false;
+      console.log(Scene3Info)
+    })
+  }
+})
+
+AFRAME.registerComponent('audiohandler3_2', {
+  init: function() {
+    let audio = document.querySelector("#audio3_2");
+    this.el.addEventListener('click', async() => { 
+      if(!AudioPlaying) {
+        AudioPlaying = true;
+        let i = 1;
+        while(i<2){
+          await sleep(25).then(()=>{
+            i=i+0.01;
+            document.querySelector('#camera').setAttribute('zoom', i)
+          })
+        }
+        audio.play()
+      }
+    });
+    audio.addEventListener('ended', async() => {
+      
+        let i = 2;
+        while(i>1){
+          await sleep(25).then(()=>{
+            i=i-0.01;
+            document.querySelector('#camera').setAttribute('zoom', i)
+          })
+        }
+      if(Scene3Info.indexOf("audio3_2") === -1) {
+        Scene2Info.push("audio3_2") 
+      }
+      AudioPlaying = false;
+      console.log(Scene3Info)
+    })
+  }
+})
+
+
+
+
+AFRAME.registerComponent('audiohandler3_3', {
+  init: function() {
+    let audio = document.querySelector("#audio3_3");
+    this.el.addEventListener('click', async() => { 
+      if(!AudioPlaying) {
+        AudioPlaying = true;
+        let i = 1;
+        while(i<2){
+          await sleep(25).then(()=>{
+            i=i+0.01;
+            document.querySelector('#camera').setAttribute('zoom', i)
+          })
+        }
+        audio.play()
+      }
+    });
+    audio.addEventListener('ended', async() => {
+      
+        // let i = 2;
+        // while(i>1){
+        //   await sleep(25).then(()=>{
+        //     i=i-0.01;
+        //     document.querySelector('#camera').setAttribute('zoom', i)
+        //   })
+        // }
+      if(Scene3Info.indexOf("audio3_3") === -1) {
+        Scene2Info.push("audio3_3")
+      }
+      AudioPlaying = false;
+      scene3_4 = true;
+      scene3_5 = false;
+      setTimeout(()=>{
+        document.querySelector("#audio_image3_4").click()
+      }, 500)
+      console.log(Scene3Info)
+    })
+  }
+})
+
+
+AFRAME.registerComponent('audiohandler3_4', {
+  init: function() {
+    let audio = document.querySelector("#audio3_4");
+    this.el.addEventListener('click', async() => { 
+      if(!AudioPlaying) {
+        AudioPlaying = true;
+        // let i = 1;
+        // while(i<2){
+        //   await sleep(25).then(()=>{
+        //     i=i+0.01;
+        //     document.querySelector('#camera').setAttribute('zoom', i)
+        //   })
+        // }
+        audio.play()
+      }
+    });
+    audio.addEventListener('ended', async() => {
+      
+        // let i = 2;
+        // while(i>1){
+        //   await sleep(25).then(()=>{
+        //     i=i-0.01;
+        //     document.querySelector('#camera').setAttribute('zoom', i)
+        //   })
+        // }
+      if(Scene3Info.indexOf("audio3_4") === -1) {
+        Scene2Info.push("audio3_4")
+      }
+      AudioPlaying = false;
+      scene3_4 = false;
+      scene3_5 = true;
+      setTimeout(()=>{
+        document.querySelector("#audio_image3_5").click()
+      }, 500)
+      console.log(Scene3Info)
+    })
+  }
+})
+
+
+AFRAME.registerComponent('audiohandler3_5', {
+  init: function() {
+    let audio = document.querySelector("#audio3_5");
+    this.el.addEventListener('click', async() => { 
+      if(!AudioPlaying) {
+        AudioPlaying = true;
+        // let i = 1;
+        // while(i<2){
+        //   await sleep(25).then(()=>{
+        //     i=i+0.01;
+        //     document.querySelector('#camera').setAttribute('zoom', i)
+        //   })
+        // }
+        audio.play()
+      }
+    });
+    audio.addEventListener('ended', async() => {
+      
+        // let i = 2;
+        // while(i>1){
+        //   await sleep(25).then(()=>{
+        //     i=i-0.01;
+        //     document.querySelector('#camera').setAttribute('zoom', i)
+        //   })
+        // }
+      if(Scene3Info.indexOf("audio3_5") === -1) {
+        Scene2Info.push("audio3_5")
+      }
+      AudioPlaying = false;
+      scene3_4 = false;
+      scene3_5 = false;
+      console.log(Scene3Info)
+    })
+  }
+})
+
+
+AFRAME.registerComponent('spacial_audiohandler3_1', {
+  init: function() {
+    let audio = document.querySelector("#spacial_audio3_1");
+    this.el.addEventListener('click', () => {
+      if(Scene3Info.indexOf("audio3_1") === -1 && !AudioPlaying) {
+        AudioPlaying = true;
+        audio.play()
+      }  
+    });
+    audio.addEventListener('ended', () => {
+      AudioPlaying = false;
+    })
+  }
+})
+
+AFRAME.registerComponent('spacial_audiohandler3_2', {
+  init: function() {
+    let audio = document.querySelector("#spacial_audio3_2");
+    this.el.addEventListener('click', () => {
+      if(Scene3Info.indexOf("audio3_2") === -1 && !AudioPlaying) {
+        AudioPlaying = true;
+        audio.play()
+      }  
+    });
+    audio.addEventListener('ended', () => {
+      AudioPlaying = false;
+    })
+  }
+})
+
+
+AFRAME.registerComponent('spacial_audiohandler3_3', {
+  init: function() {
+    let audio = document.querySelector("#spacial_audio3_3");
+    this.el.addEventListener('click', () => {
+      if(Scene3Info.indexOf("audio3_3") === -1 && !AudioPlaying) {
         AudioPlaying = true;
         audio.play()
       }  
