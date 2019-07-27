@@ -5,25 +5,10 @@ AFRAME.registerComponent('audiohandler1_1', {
       this.el.addEventListener('click', async() => { 
         if(!AudioPlaying) {
           AudioPlaying = true;
-          // let i = 1;
-          // while(i<2){
-          //   await sleep(25).then(()=>{
-          //     i=i+0.01;
-          //     document.querySelector('#camera').setAttribute('zoom', i)
-          //   })
-          // }
           audio.play()
         }
       });
       audio.addEventListener('ended', async() => {
-
-          // let i = 2;
-          // while(i>1){
-          //   await sleep(25).then(()=>{
-          //     i=i-0.01;
-          //     document.querySelector('#camera').setAttribute('zoom', i)
-          //   })
-          // }
         if(Scene1Info.indexOf("audio1_1") === -1) {
           Scene1Info.push("audio1_1") 
         }
@@ -39,25 +24,10 @@ AFRAME.registerComponent('audiohandler1_1', {
       this.el.addEventListener('click', async() => {
         if(!AudioPlaying) {
           AudioPlaying = true;
-          // let i = 1;
-          // while(i<2){
-          //   await sleep(25).then(()=>{
-          //     i=i+0.01;
-          //     document.querySelector('#camera').setAttribute('zoom', i)
-          //   })
-          // }
           audio.play()
         }
       });
       audio.addEventListener('ended', async() => {
-        
-          // let i = 2;
-          // while(i>1){
-          //   await sleep(25).then(()=>{
-          //     i=i-0.01;
-          //     document.querySelector('#camera').setAttribute('zoom', i)
-          //   })
-          // }
         if(Scene1Info.indexOf("audio1_4") === -1) {
           Scene1Info.push("audio1_4")
         }
@@ -73,25 +43,10 @@ AFRAME.registerComponent('audiohandler1_1', {
       this.el.addEventListener('click', async() => {
         if(!AudioPlaying) {
           AudioPlaying = true;
-          // let i = 1;
-          //     while(i<2){
-          //       await sleep(25).then(()=>{
-          //         i=i+0.01;
-          //         document.querySelector('#camera').setAttribute('zoom', i)
-          //       })
-          //     }
-            audio.play()
+          audio.play()
         }
       });
       audio.addEventListener('ended', async() => {
-        
-          // let i = 2;
-          // while(i>1){
-          //   await sleep(25).then(()=>{
-          //     i=i-0.01;
-          //     document.querySelector('#camera').setAttribute('zoom', i)
-          //   })
-          // }
         if(Scene1Info.indexOf("audio1_3") === -1) {
           Scene1Info.push("audio1_3")
         }
@@ -107,25 +62,10 @@ AFRAME.registerComponent('audiohandler1_1', {
       this.el.addEventListener('click', async() => {
         if(!AudioPlaying) {
           AudioPlaying = true;
-          // let i = 1;
-          //     while(i<2){
-          //       await sleep(25).then(()=>{
-          //         i=i+0.01;
-          //         document.querySelector('#camera').setAttribute('zoom', i)
-          //       })
-          //     }
           audio.play()
         }
       });
       audio.addEventListener('ended', async() => {
-        
-          // let i = 2;
-          // while(i>1){
-          //   await sleep(25).then(()=>{
-          //     i=i-0.01;
-          //     document.querySelector('#camera').setAttribute('zoom', i)
-          //   })
-          // }
         if(Scene1Info.indexOf("audio1_2") === -1) {
           Scene1Info.push("audio1_2")
         }
@@ -176,25 +116,10 @@ AFRAME.registerComponent('audiohandler2_1', {
     this.el.addEventListener('click', async() => { 
       if(!AudioPlaying) {
         AudioPlaying = true;
-        // let i = 1;
-        // while(i<2){
-        //   await sleep(25).then(()=>{
-        //     i=i+0.01;
-        //     document.querySelector('#camera').setAttribute('zoom', i)
-        //   })
-        // }
         audio.play()
       }
     });
     audio.addEventListener('ended', async() => {
-      
-        // let i = 2;
-        // while(i>1){
-        //   await sleep(25).then(()=>{
-        //     i=i-0.01;
-        //     document.querySelector('#camera').setAttribute('zoom', i)
-        //   })
-        // }
       if(Scene2Info.indexOf("audio2_1") === -1) {
         Scene2Info.push("audio2_1") 
       }
@@ -211,25 +136,10 @@ AFRAME.registerComponent('audiohandler2_2', {
     this.el.addEventListener('click', async() => { 
       if(!AudioPlaying) {
         AudioPlaying = true;
-        // let i = 1;
-        // while(i<2){
-        //   await sleep(25).then(()=>{
-        //     i=i+0.01;
-        //     document.querySelector('#camera').setAttribute('zoom', i)
-        //   })
-        // }
         audio.play()
       }
     });
     audio.addEventListener('ended', async() => {
-      
-        // let i = 2;
-        // while(i>1){
-        //   await sleep(25).then(()=>{
-        //     i=i-0.01;
-        //     document.querySelector('#camera').setAttribute('zoom', i)
-        //   })
-        // }
       if(Scene2Info.indexOf("audio2_2") === -1) {
         Scene2Info.push("audio2_2") 
       }
@@ -246,25 +156,10 @@ AFRAME.registerComponent('audiohandler2_3', {
     this.el.addEventListener('click', async() => { 
       if(!AudioPlaying) {
         AudioPlaying = true;
-        // let i = 1;
-        // while(i<2){
-        //   await sleep(25).then(()=>{
-        //     i=i+0.01;
-        //     document.querySelector('#camera').setAttribute('zoom', i)
-        //   })
-        // }
         audio.play()
       }
     });
     audio.addEventListener('ended', async() => {
-      
-        // let i = 2;
-        // while(i>1){
-        //   await sleep(25).then(()=>{
-        //     i=i-0.01;
-        //     document.querySelector('#camera').setAttribute('zoom', i)
-        //   })
-        // }
       if(Scene2Info.indexOf("audio2_3") === -1) {
         Scene2Info.push("audio2_3") 
       }
@@ -281,25 +176,10 @@ AFRAME.registerComponent('audiohandler2_4', {
     this.el.addEventListener('click', async() => { 
       if(!AudioPlaying) {
         AudioPlaying = true;
-        // let i = 1;
-        // while(i<2){
-        //   await sleep(25).then(()=>{
-        //     i=i+0.01;
-        //     document.querySelector('#camera').setAttribute('zoom', i)
-        //   })
-        // }
         audio.play()
       }
     });
     audio.addEventListener('ended', async() => {
-      
-        // let i = 2;
-        // while(i>1){
-        //   await sleep(25).then(()=>{
-        //     i=i-0.01;
-        //     document.querySelector('#camera').setAttribute('zoom', i)
-        //   })
-        // }
       if(Scene2Info.indexOf("audio2_4") === -1) {
         Scene2Info.push("audio2_4") 
       }
@@ -316,25 +196,10 @@ AFRAME.registerComponent('audiohandler2_5', {
     this.el.addEventListener('click', async() => { 
       if(!AudioPlaying) {
         AudioPlaying = true;
-        // let i = 1;
-        // while(i<2){
-        //   await sleep(25).then(()=>{
-        //     i=i+0.01;
-        //     document.querySelector('#camera').setAttribute('zoom', i)
-        //   })
-        // }
         audio.play()
       }
     });
     audio.addEventListener('ended', async() => {
-      
-        // let i = 2;
-        // while(i>1){
-        //   await sleep(25).then(()=>{
-        //     i=i-0.01;
-        //     document.querySelector('#camera').setAttribute('zoom', i)
-        //   })
-        // }
       if(Scene2Info.indexOf("audio2_5") === -1) {
         Scene2Info.push("audio2_5") 
       }
@@ -351,25 +216,10 @@ AFRAME.registerComponent('audiohandler2_6', {
     this.el.addEventListener('click', async() => { 
       if(!AudioPlaying) {
         AudioPlaying = true;
-        let i = 1;
-        while(i<2){
-          await sleep(25).then(()=>{
-            i=i+0.01;
-            document.querySelector('#camera').setAttribute('zoom', i)
-          })
-        }
         audio.play()
       }
     });
     audio.addEventListener('ended', async() => {
-      
-        let i = 2;
-        while(i>1){
-          await sleep(25).then(()=>{
-            i=i-0.01;
-            document.querySelector('#camera').setAttribute('zoom', i)
-          })
-        }
       if(Scene2Info.indexOf("audio2_6") === -1) {
         Scene2Info.push("audio2_6") 
       }
@@ -416,47 +266,6 @@ AFRAME.registerComponent('spacial_audiohandler2_6', {
 
 
 
-AFRAME.registerComponent('audiohandler3_1', {
-  init: function() {
-    let audio = document.querySelector("#audio3_1");
-    this.el.addEventListener('click', async() => { 
-      if(!AudioPlaying) {
-        AudioPlaying = true;
-        audio.play()
-      }
-    });
-    audio.addEventListener('ended', async() => {
-      if(Scene3Info.indexOf("audio3_1") === -1) {
-        Scene2Info.push("audio3_1") 
-      }
-      AudioPlaying = false;
-      console.log(Scene3Info)
-    })
-  }
-})
-
-AFRAME.registerComponent('audiohandler3_2', {
-  init: function() {
-    let audio = document.querySelector("#audio3_2");
-    this.el.addEventListener('click', async() => { 
-      if(!AudioPlaying) {
-        AudioPlaying = true;
-        audio.play()
-      }
-    });
-    audio.addEventListener('ended', async() => {
-      if(Scene3Info.indexOf("audio3_2") === -1) {
-        Scene2Info.push("audio3_2") 
-      }
-      AudioPlaying = false;
-      console.log(Scene3Info)
-    })
-  }
-})
-
-
-
-
 AFRAME.registerComponent('audiohandler3_3', {
   init: function() {
     let audio = document.querySelector("#audio3_3");
@@ -468,7 +277,7 @@ AFRAME.registerComponent('audiohandler3_3', {
     });
     audio.addEventListener('ended', async() => {
       if(Scene3Info.indexOf("audio3_3") === -1) {
-        Scene2Info.push("audio3_3")
+        Scene3Info.push("audio3_3")
       }
       AudioPlaying = false;
       scene3_4 = true;
@@ -493,7 +302,7 @@ AFRAME.registerComponent('audiohandler3_4', {
     });
     audio.addEventListener('ended', async() => {
       if(Scene3Info.indexOf("audio3_4") === -1) {
-        Scene2Info.push("audio3_4")
+        Scene3Info.push("audio3_4")
       }
       AudioPlaying = false;
       scene3_4 = false;
@@ -518,7 +327,7 @@ AFRAME.registerComponent('audiohandler3_5', {
     });
     audio.addEventListener('ended', async() => {
       if(Scene3Info.indexOf("audio3_5") === -1) {
-        Scene2Info.push("audio3_5")
+        Scene3Info.push("audio3_5")
       }
       AudioPlaying = false;
       scene3_4 = false;

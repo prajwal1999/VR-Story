@@ -1,4 +1,4 @@
-var Scene = "Scene3";
+var Scene = "Scene1";
 var AudioPlaying = false;
 
 var Scene1Info = [];
@@ -16,7 +16,7 @@ var scene3_5 = false;
         var xLabel="X: "+ currX.toFixed(2);
         var yLabel="Y: "+ currY.toFixed(2);
         var skyElement = document.querySelector('#background');
-        console.log(xLabel, yLabel)
+        // console.log(xLabel, yLabel)
         if(Scene === "Scene1") {
 
           if( (currX > 346 || currX < 20) && (currY > 65 && currY < 100) && Scene === "Scene1" ) {
@@ -87,10 +87,8 @@ var scene3_5 = false;
         } else if(Scene === "Scene3") {
           if( (currX > 313 || currX < 20) && (currY > 229 && currY < 261) ) {
             skyElement.setAttribute('src', '#scene31')
-            document.querySelector('#audio_image3_1').setAttribute('position', "95 14 18")
           } else if( (currX > 318 || currX < 16) && (currY > 143 && currY < 173) ) {
             skyElement.setAttribute('src', '#scene32')
-            document.querySelector('#audio_image3_2').setAttribute('position', "-50 15 80")
           } else if( (currX > 341 || currX < 18) && (currY > 76 && currY < 120) ) {
             if(scene3_4) {
               skyElement.setAttribute('src', '#scene34')
@@ -100,23 +98,21 @@ var scene3_5 = false;
               document.querySelector('#audio_image3_3').setAttribute('position', "-88 19 55")
             } else {
               skyElement.setAttribute('src', '#scene33')
-              document.querySelector('#audio_image3_3').setAttribute('position', "-78 19 55")
+              document.querySelector('#audio_image3_3').setAttribute('position', "-85 15 22")
             }
           } 
           else {
             skyElement.setAttribute('src', '#scene3BW')
-            document.querySelector('#audio_image3_1').setAttribute('position', "100 14 18")
-            document.querySelector('#audio_image3_2').setAttribute('position', "-50 15 100")
-            document.querySelector('#audio_image3_3').setAttribute('position', "-100 30 42")
+            document.querySelector('#audio_image3_3').setAttribute('position', "-100 15 22")
           }
         }
 
         if(Scene1Info.length === 4 && Scene === "Scene1" && !AudioPlaying) {
-          document.querySelector('#arrow_image1_1_3').setAttribute('position', "-95 -6 0")
-          document.querySelector('#arrow_image1_1_2').setAttribute('position', "-95 -6 -18")
+          document.querySelector('#arrow_image1_1_2').setAttribute('position', "-95 -6 0")
+          document.querySelector('#arrow_image1_1_3').setAttribute('position', "-95 -6 -18")
         } else {
-          document.querySelector('#arrow_image1_1_3').setAttribute('position', "-104 -6 0")
-          document.querySelector('#arrow_image1_1_2').setAttribute('position', "-104 -6 -18")
+          document.querySelector('#arrow_image1_1_2').setAttribute('position', "-104 -6 0")
+          document.querySelector('#arrow_image1_1_3').setAttribute('position', "-104 -6 -18")
         }
 
         if(Scene2Info.length === 6 && Scene === "Scene2" && !AudioPlaying) {
@@ -125,6 +121,14 @@ var scene3_5 = false;
         } else {
           document.querySelector('#arrow_image2_1').setAttribute('position', "47 50 80")
           document.querySelector('#arrow_image2_2').setAttribute('position', "55 25 -92")
+        }
+
+        if(Scene3Info.length === 3 && Scene === "Scene3" && !AudioPlaying) {
+          document.querySelector('#arrow_image3_1').setAttribute('position', "84 3 40")
+          document.querySelector('#arrow_image3_2').setAttribute('position', "-32 0 90")
+        } else {
+          document.querySelector('#arrow_image3_1').setAttribute('position', "100 3 40")
+          document.querySelector('#arrow_image3_2').setAttribute('position', "-32 0 105")
         }
     
         timerID = setTimeout(graphics,100);
