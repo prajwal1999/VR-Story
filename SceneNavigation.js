@@ -1,5 +1,5 @@
 // navigating to different screens
-document.querySelector("#arrow_image1_1").addEventListener('click', async()=>{
+document.querySelector("#arrow_image1_1_2").addEventListener('click', async()=>{
     const skyElement = document.querySelector('#background');
     let i = 1;
           while(i<2){
@@ -8,12 +8,12 @@ document.querySelector("#arrow_image1_1").addEventListener('click', async()=>{
               document.querySelector('#camera').setAttribute('zoom', i)
             })
           }
-    document.querySelector('#audio_image1_1').setAttribute('position', "-96 27 -25")
-    document.querySelector('#audio_image1_4').setAttribute('position', "-29 20 98")
-    document.querySelector('#audio_image1_3').setAttribute('position', "52 -15 -86")
-    document.querySelector('#audio_image1_2').setAttribute('position', "-75 71 1")
-    document.querySelector('#arrow_image1_1').setAttribute('position', "-94 30 -26")
-    document.querySelector('#arrow_image1_4').setAttribute('position', "-37 14 94")
+    document.querySelector('#audio_image1_1').setAttribute('position', "-100 27 0")
+    document.querySelector('#audio_image1_4').setAttribute('position', "-20 15 100")
+    document.querySelector('#audio_image1_3').setAttribute('position', "52 -15 -100")
+    document.querySelector('#audio_image1_2').setAttribute('position', "-100 60 -10")
+    document.querySelector('#arrow_image1_1_3').setAttribute('position', "-104 -6 0")
+    document.querySelector('#arrow_image1_1_2').setAttribute('position', "-104 -6 -18")
     skyElement.setAttribute('src', '#scene2BW')
     Scene = "Scene2"
     document.querySelector('#camera').setAttribute('zoom', 1)
