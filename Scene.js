@@ -7,6 +7,13 @@ var Scene3Info = [];
 var scene3_4 = false;
 var scene3_5 = false;
 
+var bg_audio_1 = document.querySelector("#audio1_bg");
+var bg_audio_2 = document.querySelector("#audio2_bg");
+var bg_audio_3 = document.querySelector("#audio3_bg");
+var bg_audio_1_playing = false;
+var bg_audio_2_playing = false;
+var bg_audio_3_playing = false;
+
       function graphics() {
         var currPos=document.querySelector("#camera").getAttribute('rotation');
         var currX=currPos.x%360;
@@ -42,9 +49,9 @@ var scene3_5 = false;
               document.querySelector('#audio_image1_2').setAttribute('position', "-100 60 -10")
               let randNum = Math.random()
               
-              if ( (randNum > 0.99) && (Scene1Info.indexOf("audio1_2") === -1) &&  Scene === "Scene1") { console.log(randNum)
+              if ( (randNum > 0.99) && (Scene1Info.indexOf("audio1_2") === -1) &&  Scene === "Scene1") {
                   document.querySelector("#spacial_box1_2").click()
-              } else if ( (randNum < 0.01) && (Scene1Info.indexOf("audio1_3") === -1) &&  Scene === "Scene1") { console.log(randNum)
+              } else if ( (randNum < 0.01) && (Scene1Info.indexOf("audio1_3") === -1) &&  Scene === "Scene1") {
                   document.querySelector("#spacial_box1_3").click()
               }
           }
@@ -70,9 +77,6 @@ var scene3_5 = false;
           }
           else {
             skyElement.setAttribute('src', '#scene2BW')
-            document.querySelector('#audio_image2_1').setAttribute('position', "47 50 80")
-            document.querySelector('#audio_image2_2').setAttribute('position', "47 11 -100")
-            document.querySelector('#audio_image2_3').setAttribute('position', "47 11 -100")
             document.querySelector('#audio_image2_4').setAttribute('position', "-100 65 41")
             document.querySelector('#audio_image2_5').setAttribute('position', "-100 43 -33")
             document.querySelector('#audio_image2_6').setAttribute('position', "5 57 -100")
@@ -85,7 +89,14 @@ var scene3_5 = false;
             }
           }
         } else if(Scene === "Scene3") {
-          if( (currX > 313 || currX < 20) && (currY > 229 && currY < 261) ) {
+          if(scene3_4) {
+            skyElement.setAttribute('src', '#scene34')
+            document.querySelector('#audio_image3_3').setAttribute('position', "-81 30 42")
+          } else if(scene3_5) {
+            skyElement.setAttribute('src', '#scene35')
+            document.querySelector('#audio_image3_3').setAttribute('position', "-88 19 55")
+          }
+          else if( (currX > 313 || currX < 20) && (currY > 229 && currY < 261) ) {
             skyElement.setAttribute('src', '#scene31')
           } else if( (currX > 318 || currX < 16) && (currY > 143 && currY < 173) ) {
             skyElement.setAttribute('src', '#scene32')
@@ -102,12 +113,12 @@ var scene3_5 = false;
             }
           } 
           else {
-            skyElement.setAttribute('src', '#scene3BW')
-            document.querySelector('#audio_image3_3').setAttribute('position', "-100 15 22")
+              skyElement.setAttribute('src', '#scene3BW')
+              document.querySelector('#audio_image3_3').setAttribute('position', "-100 15 22")
           }
         }
 
-        if(Scene1Info.length === 4 && Scene === "Scene1" && !AudioPlaying) {
+        if(Scene1Info.length === 0 && Scene === "Scene1" && !AudioPlaying) {
           document.querySelector('#arrow_image1_1_2').setAttribute('position', "-95 -6 0")
           document.querySelector('#arrow_image1_1_3').setAttribute('position', "-95 -6 -18")
         } else {
@@ -130,6 +141,30 @@ var scene3_5 = false;
           document.querySelector('#arrow_image3_1').setAttribute('position', "100 3 40")
           document.querySelector('#arrow_image3_2').setAttribute('position', "-32 0 105")
         }
+
+
+
+        // background sound for scenes 
+        // if(Scene === "Scene1") {
+          if(!bg_audio_1_playing) {
+            bg_audio_1_playing = true
+            bg_audio_1.play(); 
+          }
+          bg_audio_1.addEventListener('ended', ()=> {
+            bg_audio_1_playing = false;
+          })
+        // } 
+        // else if(Scene === "Scene2") {
+        //   bg_audio_1 = false;
+        //   bg_audio_3 = false;
+        //   if(!bg_audio_2_playing) {
+        //     bg_audio_2_playing = true
+        //     bg_audio_2.play(); 
+        //   }
+        //   bg_audio_2.addEventListener('ended', ()=> {
+        //     bg_audio_2_playing = false;
+        //   })
+        // }
     
         timerID = setTimeout(graphics,100);
 

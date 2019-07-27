@@ -110,66 +110,6 @@ AFRAME.registerComponent('audiohandler1_1', {
  
 
 // Scene 2
-AFRAME.registerComponent('audiohandler2_1', {
-  init: function() {
-    let audio = document.querySelector("#audio2_1");
-    this.el.addEventListener('click', async() => { 
-      if(!AudioPlaying) {
-        AudioPlaying = true;
-        audio.play()
-      }
-    });
-    audio.addEventListener('ended', async() => {
-      if(Scene2Info.indexOf("audio2_1") === -1) {
-        Scene2Info.push("audio2_1") 
-      }
-      AudioPlaying = false;
-      console.log(Scene2Info)
-    })
-  }
-})
-
-
-AFRAME.registerComponent('audiohandler2_2', {
-  init: function() {
-    let audio = document.querySelector("#audio2_2");
-    this.el.addEventListener('click', async() => { 
-      if(!AudioPlaying) {
-        AudioPlaying = true;
-        audio.play()
-      }
-    });
-    audio.addEventListener('ended', async() => {
-      if(Scene2Info.indexOf("audio2_2") === -1) {
-        Scene2Info.push("audio2_2") 
-      }
-      AudioPlaying = false;
-      console.log(Scene2Info)
-    })
-  }
-})
-
-
-AFRAME.registerComponent('audiohandler2_3', {
-  init: function() {
-    let audio = document.querySelector("#audio2_3");
-    this.el.addEventListener('click', async() => { 
-      if(!AudioPlaying) {
-        AudioPlaying = true;
-        audio.play()
-      }
-    });
-    audio.addEventListener('ended', async() => {
-      if(Scene2Info.indexOf("audio2_3") === -1) {
-        Scene2Info.push("audio2_3") 
-      }
-      AudioPlaying = false;
-      console.log(Scene2Info)
-    })
-  }
-})
-
-
 AFRAME.registerComponent('audiohandler2_4', {
   init: function() {
     let audio = document.querySelector("#audio2_4");
