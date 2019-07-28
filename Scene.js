@@ -43,10 +43,10 @@ var bg_audio_3_playing = false;
           }
           else {
               skyElement.setAttribute('src', '#scene1BW')
-              document.querySelector('#audio_image1_1').setAttribute('position', "-100 27 0")
-              document.querySelector('#audio_image1_4').setAttribute('position', "-20 15 100")
-              document.querySelector('#audio_image1_3').setAttribute('position', "52 -15 -100")
-              document.querySelector('#audio_image1_2').setAttribute('position', "-100 60 -10")
+              document.querySelector('#audio_image1_1').setAttribute('position', "100 100 100")
+              document.querySelector('#audio_image1_4').setAttribute('position', "100 100 100")
+              document.querySelector('#audio_image1_3').setAttribute('position', "100 100 100")
+              document.querySelector('#audio_image1_2').setAttribute('position', "100 100 100")
               let randNum = Math.random()
               
               if ( (randNum > 0.99) && (Scene1Info.indexOf("audio1_2") === -1) &&  Scene === "Scene1") {
@@ -58,28 +58,25 @@ var bg_audio_3_playing = false;
         } else if(Scene === "Scene2") {
           if( (currX > 326 || currX < 28) && (currY > 213 && currY < 251) ) {
             skyElement.setAttribute('src', '#scene21')
-            document.querySelector('#audio_image2_1').setAttribute('position', "53 20 75")
           } else if( (currX > 328 || currX < 22) && (currY > 330 && currY < 354) ) {
             skyElement.setAttribute('src', '#scene22')
-            document.querySelector('#audio_image2_2').setAttribute('position', "47 11 -86")
           } else if( (currX > 319 && currX < 347) && (currY > 175 && currY < 188) ) {
             skyElement.setAttribute('src', '#scene23')
-            document.querySelector('#audio_image2_3').setAttribute('position', "8 -24 92")
           } else if( (currX > 30 && currX < 43) && (currY > 120 && currY < 133) ) {
             skyElement.setAttribute('src', '#scene24')
             document.querySelector('#audio_image2_4').setAttribute('position', "-58 65 41")
           } else if( (currX > 354 || currX < 25) && (currY > 45 && currY < 70) ) {
             skyElement.setAttribute('src', '#scene25')
-            document.querySelector('#audio_image2_5').setAttribute('position', "-80 43 -33")
+            document.querySelector('#audio_image2_5').setAttribute('position', "-80 25 -51")
           } else if( (currX > 22 && currX < 41) && (currY > 357 || currY < 10) ) {
             skyElement.setAttribute('src', '#scene26')
-            document.querySelector('#audio_image2_6').setAttribute('position', "5 57 -77")
+            document.querySelector('#audio_image2_6').setAttribute('position', "1 55 -77")
           }
           else {
             skyElement.setAttribute('src', '#scene2BW')
-            document.querySelector('#audio_image2_4').setAttribute('position', "-100 65 41")
-            document.querySelector('#audio_image2_5').setAttribute('position', "-100 43 -33")
-            document.querySelector('#audio_image2_6').setAttribute('position', "5 57 -100")
+            document.querySelector('#audio_image2_4').setAttribute('position', "100 100 100")
+            document.querySelector('#audio_image2_5').setAttribute('position', "100 100 100")
+            document.querySelector('#audio_image2_6').setAttribute('position', "100 100 100")
             let randNum = Math.random()
               
             if ( (randNum > 0.20) && (randNum < 0.21) && (Scene2Info.indexOf("audio2_4") === -1) &&  Scene === "Scene2") { console.log(randNum)
@@ -114,38 +111,36 @@ var bg_audio_3_playing = false;
           } 
           else {
               skyElement.setAttribute('src', '#scene3BW')
-              document.querySelector('#audio_image3_3').setAttribute('position', "-100 15 22")
+              document.querySelector('#audio_image3_3').setAttribute('position', "100 100 100")
           }
         }
 
-        if(Scene1Info.length === 0 && Scene === "Scene1" && !AudioPlaying) {
+        if(Scene1Info.length === 4 && Scene === "Scene1" && !AudioPlaying) {
           document.querySelector('#arrow_image1_1_2').setAttribute('position', "-95 -6 0")
           document.querySelector('#arrow_image1_1_3').setAttribute('position', "-95 -6 -18")
         } else {
-          document.querySelector('#arrow_image1_1_2').setAttribute('position', "-104 -6 0")
-          document.querySelector('#arrow_image1_1_3').setAttribute('position', "-104 -6 -18")
+          document.querySelector('#arrow_image1_1_2').setAttribute('position', "100 100 100")
+          document.querySelector('#arrow_image1_1_3').setAttribute('position', "100 100 100")
         }
 
-        if(Scene2Info.length === 6 && Scene === "Scene2" && !AudioPlaying) {
+        if(Scene2Info.length === 3 && Scene === "Scene2" && !AudioPlaying) {
           document.querySelector('#arrow_image2_1').setAttribute('position', "47 22 80")
           document.querySelector('#arrow_image2_2').setAttribute('position', "55 25 -68")
         } else {
-          document.querySelector('#arrow_image2_1').setAttribute('position', "47 50 80")
-          document.querySelector('#arrow_image2_2').setAttribute('position', "55 25 -92")
+          document.querySelector('#arrow_image2_1').setAttribute('position', "100 100 100")
+          document.querySelector('#arrow_image2_2').setAttribute('position', "100 100 100")
         }
 
         if(Scene3Info.length === 3 && Scene === "Scene3" && !AudioPlaying) {
           document.querySelector('#arrow_image3_1').setAttribute('position', "84 3 40")
           document.querySelector('#arrow_image3_2').setAttribute('position', "-32 0 90")
         } else {
-          document.querySelector('#arrow_image3_1').setAttribute('position', "100 3 40")
-          document.querySelector('#arrow_image3_2').setAttribute('position', "-32 0 105")
+          document.querySelector('#arrow_image3_1').setAttribute('position', "100 100 100")
+          document.querySelector('#arrow_image3_2').setAttribute('position', "100 100 100")
         }
 
 
 
-        // background sound for scenes 
-        // if(Scene === "Scene1") {
           if(!bg_audio_1_playing) {
             bg_audio_1_playing = true
             bg_audio_1.play(); 
@@ -153,18 +148,6 @@ var bg_audio_3_playing = false;
           bg_audio_1.addEventListener('ended', ()=> {
             bg_audio_1_playing = false;
           })
-        // } 
-        // else if(Scene === "Scene2") {
-        //   bg_audio_1 = false;
-        //   bg_audio_3 = false;
-        //   if(!bg_audio_2_playing) {
-        //     bg_audio_2_playing = true
-        //     bg_audio_2.play(); 
-        //   }
-        //   bg_audio_2.addEventListener('ended', ()=> {
-        //     bg_audio_2_playing = false;
-        //   })
-        // }
     
         timerID = setTimeout(graphics,100);
 
